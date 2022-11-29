@@ -12,8 +12,11 @@ namespace AreaCalculator.Primitives
 
         public Triangle(double sideA, double sideB, double sideC)
         {
-            if (sideA < 0 || sideB < 0 || sideC < 0) throw new ArgumentOutOfRangeException("Сторона не может быть меньше 0");
-            if (!IsValidTriangle(sideA, sideB, sideC)) throw new ArgumentOutOfRangeException("Треугольник не может быть построен из заданных сторон");
+            if (sideA < 0 || sideB < 0 || sideC < 0) 
+                throw new ArgumentOutOfRangeException("Сторона не может быть меньше 0");
+
+            if (!IsValidTriangle(sideA, sideB, sideC)) 
+                throw new ArgumentOutOfRangeException("Треугольник не может быть построен из заданных сторон");
 
             SideA = sideA;
             SideB = sideB;
